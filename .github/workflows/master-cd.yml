@@ -19,11 +19,12 @@ jobs:
           always-auth: true
           registry-url: https://registry.npmjs.org
 
-      - name: Install dependencies
-        run: yarn install --immutable
+      - name: Run install
+        run: yarn
 
-      - name: Build bundle
-        run: CI=false PUBLIC_URL=./ yarn run build
+      - name: Build
+        run: CI=false yarn build
+
 
       - name: Upload bundle
         uses: appleboy/scp-action@master
