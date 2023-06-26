@@ -32,7 +32,7 @@ jobs:
           username: ${{ secrets.SSH_PRD_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "build"
-          target: "~"
+          target: "/opt/test"
       - name: Upgrade apps
         uses: fifsky/ssh-action@master
         with:
