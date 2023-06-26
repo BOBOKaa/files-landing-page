@@ -2,7 +2,7 @@ name: master-cd
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   # manual trigger
   workflow_dispatch:
 
