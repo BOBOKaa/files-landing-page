@@ -31,14 +31,6 @@ jobs:
           host: ${{ secrets.SSH_PRD_HOST }}
           username: ${{ secrets.SSH_PRD_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "build"
+          source: "./build"
           target: "/opt/test"
-      - name: Upgrade apps
-        uses: fifsky/ssh-action@master
-        with:
-          command: |
-            sudo cp -rf build /usr/
-            sudo rm -rf build
-          host: ${{ secrets.SSH_PRD_HOST }}
-          user: ${{ secrets.SSH_PRD_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+
